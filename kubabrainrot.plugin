@@ -35,7 +35,23 @@ messages = [
 
     # Mishaal messages
     "If you want to keep having fun with these internal builds then you need to be more low key and quiet about it",
-    "This is the most important thing. If Google knows people are getting these internal builds, they're going to investigate how, and then they'll figure out what's going on and close the loophole."
+    "This is the most important thing. If Google knows people are getting these internal builds, they're going to investigate how, and then they'll figure out what's going on and close the loophole.",
+    "Yeah this is why I don't use any of these builds as my daily driver lol",
+    "I'm not a beta tester for Google 🤣",
+    "I have a P8P but it's running dogfood so I don't want to migrate, that would be a pain",
+    "I'm not going to be screwed if this loophole closed down but it would be very hurtful",
+    "Someone I know found this same loophole you guys did a while ago, and it would be a shame if it was closed down",
+    "I don't have the same dogfood build that you do, unfortunately",
+
+    """I would HIGHLY advise the following:
+
+1) Do NOT share these builds with anyone under any circumstances. Once it gets out there that you have these, people won't stop asking about them, and you'll get Google's attention.
+
+2) Do not post about any new features that aren't hinted at or aren't available in code in the latest public beta. So for example in one of your videos you posted about the new Easter egg with live notification support. Don't do that.
+
+Try not to draw any attention to the fact that you have these builds. If you do, then it just becomes more likely the loophole you're using will be closed.""",
+
+    "I know someone with access to the partner repos, so I have the code",
 ]
 
 class KubaBrainrotPlugin(BasePlugin):
