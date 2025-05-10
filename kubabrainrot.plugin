@@ -1,0 +1,50 @@
+from base_plugin import BasePlugin, HookResult, HookStrategy
+from android_utils import log
+from markdown_utils import parse_markdown
+import random
+
+__id__ = "kuba_brainrot"
+__name__ = "Kuba Brainrot"
+__description__ = "Random Kuba Brainrot message (.kuba)"
+__author__ = "@romashkagene"
+__min_version__ = "11.9.0"
+__icon__ = "technoGeekPack/0"
+
+messages = [
+    "i don't know how or why you have zp1a but i suggest you shut the fuck up at least or ill personally make sure nobody gets a single build ever again",
+    "lil vro, kill yourself, if your reading comprehension is that bad you don't have a ton to live for 💔💔",
+    "im not gonna say much but googlers are already looking into this btw",
+    "no because im not an idiot and dont go around screaming that i have an userdebug build literally everywhere",
+    "im like that guy that got into a nuclear accident",
+    "big g knows",
+    "yeah the feeling is mutual, love when your racist bros insult me and post my nudes in public groups!",
+    "i do not care about you and never will, you will never matter to me in any way, stop bothering me",
+    "grow up sometime bitch",
+    "it's called working with sources",
+    "something you would have no clue about",
+    "whats fun is google knows but shhh :)",
+    "is the army of racists now after me",
+    "oh no, the racists are onto us",
+    "who cares omggggggg get a life",
+    "ok reporting this shit on betterbug and tagging u",
+    "I'm just that good ;3",
+
+    # Mishaal messages
+    "If you want to keep having fun with these internal builds then you need to be more low key and quiet about it",
+]
+
+class KubaBrainrotPlugin(BasePlugin):
+    def on_send_message_hook(self, account, params) -> HookStrategy:
+        try:
+            if not isinstance(params.message, str):
+                return HookResult()
+
+            if not params.message.startswith(".kuba"):
+                return HookResult()
+
+            params.message = random.choice(messages)
+
+            return HookResult(strategy=HookStrategy.MODIFY, params=params)
+        except Exception as e:
+            log(f"DonoMod plugin error: {str(e)}")
+            return HookResult()
