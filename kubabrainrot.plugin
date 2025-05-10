@@ -28,9 +28,14 @@ messages = [
     "who cares omggggggg get a life",
     "ok reporting this shit on betterbug and tagging u",
     "I'm just that good ;3",
+    "talk to the racists",
+    "hey so if youre the person leaking messages please just know that youre just a loser who needs to touch grass",
+    "its so funny the racists of the community actually think it was me who killed the zp1a thing",
+    "oh yeah its defo us and not you stupid bitches showing the build everywhere lol",
 
     # Mishaal messages
     "If you want to keep having fun with these internal builds then you need to be more low key and quiet about it",
+    "This is the most important thing. If Google knows people are getting these internal builds, they're going to investigate how, and then they'll figure out what's going on and close the loophole."
 ]
 
 class KubaBrainrotPlugin(BasePlugin):

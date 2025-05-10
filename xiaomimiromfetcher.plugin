@@ -5,7 +5,7 @@ from markdown_utils import parse_markdown
 import requests
 
 __id__ = "xiaomiotaprober"
-__name__ = "Xiaomi Fastboot MIROM fetcher"
+__name__ = "Xiaomi Fastboot ROM fetcher"
 __description__ = "Fastboot ROM fetcher"
 __author__ = "@romashkagene"
 __min_version__ = "11.9.0"
