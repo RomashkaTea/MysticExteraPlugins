@@ -8,6 +8,7 @@ __id__ = "xiaomiotaprober"
 __name__ = "Xiaomi Fastboot ROM fetcher"
 __description__ = "Fastboot ROM fetcher"
 __author__ = "@romashkagene"
+__version__ = "1.2"
 __min_version__ = "11.9.0"
 __icon__ = "technoGeekPack/24"
 
@@ -60,16 +61,20 @@ def get_ota_info(device, branch, region):
         filesize = rom_info.get('filesize')
         codebase = rom_info.get("codebase")
         version = rom_info.get("version")
-
+        
         return (
-            f"• *Device*: {codename}\n"
+            f"• *Device*: {codename.replace('_', f'{chr(92)}_')}\n" # dumb way to fix 'f-string expression part cannot include a backslash' 
             f"• *Version*: {version}\n"
             f"• *Size*: {filesize}\n\n"
             f"[DOWNLOAD](https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/{version}/{filename})"
         )
 
     return None
+
 class XiaomiOtaPlugin(BasePlugin):
+    def on_plugin_load(self):
+        self.add_on_send_message_hook()
+
     def on_send_message_hook(self, account, params) -> HookStrategy:
         try:
             if not isinstance(params.message, str):
